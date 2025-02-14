@@ -14,7 +14,7 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
 ---
 
 ## 📂 Estrutura do Projeto
-\```plaintext
+\```
   .
   ├── main.go              # Ponto de entrada da aplicação
   ├── handlers/            # Contém os handlers da API
@@ -57,7 +57,7 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
  - json — Para serialização das respostas
 
 ## 📤 Exemplo de Resposta da API
-\```plaintext
+\```
 [
   {
     "data": "01/01/2025",
