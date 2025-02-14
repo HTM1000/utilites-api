@@ -14,7 +14,7 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
 ---
 
 ## 📂 Estrutura do Projeto
-\```
+ ```bash
   .
   ├── main.go              # Ponto de entrada da aplicação
   ├── handlers/            # Contém os handlers da API
@@ -25,29 +25,28 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
   │   └── inss.go          # Modelo para representar as tabelas do INSS
   ├── go.mod               # Arquivo de configuração do Go
   └── go.sum               # Dependências do projeto
-/```
 ---
 
 ## 🚀 Como Rodar o Projeto
 
 1. Clone o repositório:
-   ```
+   ```bash
    git clone https://github.com/HTM1000/table-inss.git
 
 2. Navegue até a pasta do projeto:
-   ```
+   ```bash
     cd table-inss
 
 3. Instale as dependências:
-   ```
+   ```bash
     go mod tidy
 
 4. Execute o servidor:
-   ```
+   ```bash
    go run main.go
 
 5. Acesse o endpoint no navegador ou usando ferramentas como curl ou Postman:
-   ```
+   ```bash
     http://localhost:8080/api/inss
 
 ## 🛠️ Tecnologias Utilizadas
@@ -57,20 +56,19 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
  - json — Para serialização das respostas
 
 ## 📤 Exemplo de Resposta da API
-\```
-[
-  {
-    "data": "01/01/2025",
-    "faixa": "Até R$ 1.302,00",
-    "aliquota": "7.5%"
-  },
-  {
-    "data": "01/01/2025",
-    "faixa": "De R$ 1.302,01 até R$ 2.571,29",
-    "aliquota": "9%"
-  }
-]
-\```
+  ```bash
+  [
+    {
+      "data": "01/01/2025",
+      "faixa": "Até R$ 1.302,00",
+      "aliquota": "7.5%"
+    },
+    {
+      "data": "01/01/2025",
+      "faixa": "De R$ 1.302,01 até R$ 2.571,29",
+      "aliquota": "9%"
+    }
+  ]
 
 ## 📈 Melhorias Futuras
 - Implementar caching dos resultados para evitar múltiplas requisições.
