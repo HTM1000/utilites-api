@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/HTM1000/table-inss/services"
+	"github.com/HTM1000/table-inss/internal/services"
 )
 
 func InssHandler(w http.ResponseWriter, r *http.Request) {

@@ -1,4 +1,4 @@
-package entity
+package domain
 
 type InssTabela struct {
 	Data     string `json:"data"`

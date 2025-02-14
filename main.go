@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/HTM1000/table-inss/handlers"
+	"github.com/HTM1000/table-inss/internal/handlers"
 )
 
 func main() {

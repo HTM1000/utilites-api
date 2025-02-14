@@ -5,12 +5,12 @@ import (
 	"log"
 	"strings"
 
-	"github.com/HTM1000/table-inss/entity"
+	"github.com/HTM1000/table-inss/domain"
 	"github.com/gocolly/colly"
 )
 
-func ScrapeINSS() []entity.InssTabela {
-	var tabelas []entity.InssTabela
+func ScrapeINSS() []domain.InssTabela {
+	var tabelas []domain.InssTabela
 
 	c := colly.NewCollector(
 		colly.AllowURLRevisit(),
@@ -36,7 +36,7 @@ func ScrapeINSS() []entity.InssTabela {
 				fmt.Printf("Encontrou linha - Faixa: %s, Aliquota: %s\n", faixa, aliquota)
 
 				if faixa != "" && aliquota != "" {
-					tabelas = append(tabelas, entity.InssTabela{
+					tabelas = append(tabelas, domain.InssTabela{
 						Data:     data,
 						Faixa:    faixa,
 						Aliquota: aliquota + "%",
