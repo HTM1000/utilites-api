@@ -14,7 +14,7 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
 ---
 
 ## 📂 Estrutura do Projeto
-  ```
+\```plaintext
   .
   ├── main.go              # Ponto de entrada da aplicação
   ├── handlers/            # Contém os handlers da API
@@ -25,7 +25,7 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
   │   └── inss.go          # Modelo para representar as tabelas do INSS
   ├── go.mod               # Arquivo de configuração do Go
   └── go.sum               # Dependências do projeto
-
+/```
 ---
 
 ## 🚀 Como Rodar o Projeto
@@ -57,24 +57,25 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
  - json — Para serialização das respostas
 
 ## 📤 Exemplo de Resposta da API
-   ```
-    [
-      {
-        "data": "01/01/2025",
-        "faixa": "Até R$ 1.302,00",
-        "aliquota": "7.5%"
-      },
-      {
-        "data": "01/01/2025",
-        "faixa": "De R$ 1.302,01 até R$ 2.571,29",
-        "aliquota": "9%"
-      }
-    ]
+\```plaintext
+[
+  {
+    "data": "01/01/2025",
+    "faixa": "Até R$ 1.302,00",
+    "aliquota": "7.5%"
+  },
+  {
+    "data": "01/01/2025",
+    "faixa": "De R$ 1.302,01 até R$ 2.571,29",
+    "aliquota": "9%"
+  }
+]
+\```
 
 ## 📈 Melhorias Futuras
- - Implementar caching dos resultados para evitar múltiplas requisições.
- - Adicionar testes unitários para a função de scraping e o handler.
- - Criar uma documentação OpenAPI/Swagger para facilitar o consumo da API.
+- Implementar caching dos resultados para evitar múltiplas requisições.
+- Adicionar testes unitários para a função de scraping e o handler.
+- Criar uma documentação OpenAPI/Swagger para facilitar o consumo da API.
 
 ## ⚠️ Observações
 Este projeto foi desenvolvido para fins de aprendizado.
