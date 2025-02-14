@@ -17,15 +17,16 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
 
 ```
 .
-├── main.go              # Ponto de entrada da aplicação
-├── handlers/            # Contém os handlers da API
-│   └── inss_handler.go  # Handler responsável pelo endpoint /api/inss
-├── services/            # Lógica de web scraping
-│   └── scrape_inss.go   # Função para coletar os dados das tabelas do INSS
-├── entity/              # Definições dos modelos de dados
-│   └── inss.go          # Modelo para representar as tabelas do INSS
-├── go.mod               # Arquivo de configuração do Go
-└── go.sum               # Dependências do projeto
+├── main.go                  # Ponto de entrada da aplicação
+├── internal/                # Contém a lógica interna da aplicação
+│   └── handlers/            # Contém os handlers da API
+│       └── inss_handler.go  # Handler responsável pelo endpoint /api/inss
+│   └── services/            # Lógica de web scraping
+│       └── scrape_inss.go   # Função para coletar os dados das tabelas do INSS
+├── domain/                  # Definições dos modelos de dados
+│   └── inss.go              # Modelo para representar as tabelas do INSS
+├── go.mod                   # Arquivo de configuração do Go
+└── go.sum                   # Dependências do projeto
 ```
 
 ---
