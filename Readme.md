@@ -14,66 +14,80 @@ Este projeto é uma API escrita em Go que realiza **web scraping** para obter in
 ---
 
 ## 📂 Estrutura do Projeto
- ```bash
-  .
-  ├── main.go              # Ponto de entrada da aplicação
-  ├── handlers/            # Contém os handlers da API
-  │   └── inss_handler.go  # Handler responsável pelo endpoint /api/inss
-  ├── services/            # Lógica de web scraping
-  │   └── scrape_inss.go   # Função para coletar os dados das tabelas do INSS
-  ├── entity/              # Definições dos modelos de dados
-  │   └── inss.go          # Modelo para representar as tabelas do INSS
-  ├── go.mod               # Arquivo de configuração do Go
-  └── go.sum               # Dependências do projeto
+
+```
+.
+├── main.go              # Ponto de entrada da aplicação
+├── handlers/            # Contém os handlers da API
+│   └── inss_handler.go  # Handler responsável pelo endpoint /api/inss
+├── services/            # Lógica de web scraping
+│   └── scrape_inss.go   # Função para coletar os dados das tabelas do INSS
+├── entity/              # Definições dos modelos de dados
+│   └── inss.go          # Modelo para representar as tabelas do INSS
+├── go.mod               # Arquivo de configuração do Go
+└── go.sum               # Dependências do projeto
+```
+
 ---
 
 ## 🚀 Como Rodar o Projeto
 
 1. Clone o repositório:
-   ```bash
+   ```sh
    git clone https://github.com/HTM1000/table-inss.git
+   ```
 
 2. Navegue até a pasta do projeto:
-   ```bash
-    cd table-inss
+   ```sh
+   cd table-inss
+   ```
 
 3. Instale as dependências:
-   ```bash
-    go mod tidy
+   ```sh
+   go mod tidy
+   ```
 
 4. Execute o servidor:
-   ```bash
+   ```sh
    go run main.go
+   ```
 
 5. Acesse o endpoint no navegador ou usando ferramentas como curl ou Postman:
-   ```bash
-    http://localhost:8080/api/inss
+   ```sh
+   http://localhost:8080/api/inss
+   ```
 
 ## 🛠️ Tecnologias Utilizadas
- - Go — Linguagem principal do projeto
- - Colly — Biblioteca para web scraping
- - net/http — Módulo nativo para construir a API REST
- - json — Para serialização das respostas
+
+- **Go** — Linguagem principal do projeto
+- **Colly** — Biblioteca para web scraping
+- **net/http** — Módulo nativo para construir a API REST
+- **json** — Para serialização das respostas
 
 ## 📤 Exemplo de Resposta da API
-  ```bash
-  [
-    {
-      "data": "01/01/2025",
-      "faixa": "Até R$ 1.302,00",
-      "aliquota": "7.5%"
-    },
-    {
-      "data": "01/01/2025",
-      "faixa": "De R$ 1.302,01 até R$ 2.571,29",
-      "aliquota": "9%"
-    }
-  ]
+
+```json
+[
+  {
+    "data": "01/01/2025",
+    "faixa": "Até R$ 1.302,00",
+    "aliquota": "7.5%"
+  },
+  {
+    "data": "01/01/2025",
+    "faixa": "De R$ 1.302,01 até R$ 2.571,29",
+    "aliquota": "9%"
+  }
+]
+```
 
 ## 📈 Melhorias Futuras
+
 - Implementar caching dos resultados para evitar múltiplas requisições.
 - Adicionar testes unitários para a função de scraping e o handler.
 - Criar uma documentação OpenAPI/Swagger para facilitar o consumo da API.
 
 ## ⚠️ Observações
+
 Este projeto foi desenvolvido para fins de aprendizado.
+
